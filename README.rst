@@ -20,6 +20,8 @@ Add ``favorites`` to ``INSTALLED APPS``.
     | # Add every model (app_label.model) you are going to add favorites.
     | FAVORITE_MODELS = ['test.article', ]
 
+Render the fav button/form
+
     | #template
     | {% load favorites %}
     | {% render_favorite_form obj user next=request.get_full_path %}
