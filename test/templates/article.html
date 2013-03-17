@@ -1,0 +1,19 @@
+{% load favorites i18n %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ article.title }}</title>
+</head>
+<body>
+
+    <h1>{{ article.title }}</h1>
+
+    <div>
+
+        {% render_favorite_form article user next=request.get_full_path %}
+
+    </div>
+
+</body>
+</html>

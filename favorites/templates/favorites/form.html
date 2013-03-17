@@ -1,0 +1,14 @@
+{% load i18n %}
+
+{% if not favorite %}
+    <form action="{% url "favorite-create" %}" method="post">{% csrf_token %}
+        {% if next %}<input type="hidden" name="next" value="{{ next }}" />{% endif %}
+        {{ form }}
+        <input class="btn" type="submit" name="favorite" value="favorite">
+    </form>
+{% else %}
+    <form action="{% url "favorite-delete" favorite.pk %}" method="post">{% csrf_token %}
+        {% if next %}<input type="hidden" name="next" value="{{ next }}" />{% endif %}
+        <input class="btn" type="submit" name="favorite" value="favorite-">
+    </form>
+{% endif %}

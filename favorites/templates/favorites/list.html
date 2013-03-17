@@ -1,0 +1,29 @@
+{% load favorites i18n %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User favorites</title>
+</head>
+<body>
+
+    <div>
+
+        <h1>
+            Favoritos
+        </h1>
+
+        <div>
+            {% for f in page_object %}
+                <div>
+                    <a href="{{ f.content_object.get_absolute_url }}" >{{ f.content_object.display_name }}</a>
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+

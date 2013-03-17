@@ -1,0 +1,2 @@
+[{"pk": 1, "model": "test.article", "fields": {"title": "test"}}]
+/* manage.py loaddata test article.json */
