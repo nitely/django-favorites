@@ -3,7 +3,6 @@ Favorites for Django
 
 django-favorites is a LGPL Licensed app for Django.
 
-| Requires: Django +1.4.3
 | Tested on: Python 2.7, Django 1.5
 
 Config

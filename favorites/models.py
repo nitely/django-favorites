@@ -48,4 +48,4 @@ def favorite_relation_check(sender, instance, raw, using, **kwargs):
         raise ValueError('%s model not found in FAVORITE_MODELS' % instance.content_object.__class__.__name__)
 
 
-signals.pre_save.connect(favorite_relation_check, sender=Favorite)
+signals.pre_save.connect(favorite_relation_check, sender=Favorite, dispatch_uid=__name__)
